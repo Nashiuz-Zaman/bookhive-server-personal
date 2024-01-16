@@ -3,7 +3,7 @@ const express = require("express");
 const applyMiddlewares = require("./middlewares/applyMiddlewares");
 
 // import routes
-const emailRouter = require("./routes/email/index");
+const exampleRouter = require("./routes/exampleRoute/index");
 
 // app setup
 const app = express();
@@ -12,9 +12,9 @@ const app = express();
 applyMiddlewares(app);
 
 // all the routes handling is here below
-app.use(emailRouter);
+app.use(exampleRouter);
 
-// test
+// health test
 app.get("/health", (req, res) => {
   res.send("Working properly");
 });

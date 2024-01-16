@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 
 const main = async () => {
   server.listen(port, () => {
-    console.log("Zarif listening");
+    console.log("Server Working");
   });
 };
 

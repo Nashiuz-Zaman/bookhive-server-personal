@@ -1,13 +1,11 @@
 // imports
 const express = require("express");
-
-// controller
-const sendEmail = require("./../../api/email/controllers/sendEmail");
+const exampleController = require("../../api/exampleAPI/controllers/exampleController");
 
 // create router
 const router = express.Router();
 
 // routes
-router.post("/send-email", sendEmail);
+router.post("/example-api", exampleController);
 
 module.exports = router;
