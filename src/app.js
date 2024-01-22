@@ -3,7 +3,8 @@ const express = require("express");
 const applyMiddlewares = require("./middlewares/applyMiddlewares");
 
 // import routes
-const exampleRouter = require("./routes/exampleRoute/index");
+const userRouter = require("./routes/users/index");
+const authRouter = require("./routes/auth/index");
 
 // app setup
 const app = express();
@@ -12,7 +13,8 @@ const app = express();
 applyMiddlewares(app);
 
 // all the routes handling is here below
-app.use(exampleRouter);
+app.use(userRouter);
+app.use(authRouter);
 
 // health test
 app.get("/health", (req, res) => {
