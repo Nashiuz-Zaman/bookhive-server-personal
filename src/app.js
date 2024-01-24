@@ -5,6 +5,7 @@ const applyMiddlewares = require("./middlewares/applyMiddlewares");
 // import routes
 const userRouter = require("./routes/users/index");
 const authRouter = require("./routes/auth/index");
+const bookRouter = require("./routes/book/index");
 
 // app setup
 const app = express();
@@ -15,6 +16,7 @@ applyMiddlewares(app);
 // all the routes handling is here below
 app.use(userRouter);
 app.use(authRouter);
+app.use(bookRouter);
 
 // health test
 app.get("/health", (req, res) => {
