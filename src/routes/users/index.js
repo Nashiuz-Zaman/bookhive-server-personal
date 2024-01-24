@@ -10,7 +10,7 @@ const router = express.Router();
 
 // routes
 router.post("/users", createUser);
-router.post("/checkUserExists", checkUser);
+router.post("/users/check", checkUser);
 router.patch("/users/:email", updateUser);
 router.get("/users/members", getMembers);
 
