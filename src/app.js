@@ -7,6 +7,7 @@ const userRouter = require("./routes/users/index");
 const authRouter = require("./routes/auth/index");
 const bookRouter = require("./routes/book/index");
 const emailRouter = require("./routes/email/index");
+const orderRouter = require("./routes/orders/index");
 
 // app setup
 const app = express();
@@ -19,6 +20,7 @@ app.use(userRouter);
 app.use(authRouter);
 app.use(bookRouter);
 app.use(emailRouter);
+app.use(orderRouter);
 
 // health test
 app.get("/health", (req, res) => {
